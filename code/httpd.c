@@ -8,6 +8,12 @@
 #include <pthread.h>
 #include <httpd.h>
 
+int startup(u_short *port) {
+    int sock;
+
+}
+
+
 
 int main(void) {
     u_short port = 4040;
@@ -15,8 +21,8 @@ int main(void) {
     struct sockaddr_in client_addr;
     socklen_t client_addr_len = sizeof(client_addr);
     pthread_t newthread;
-
+    
     ser_sock = startup(&port);
-
+    printf("httpd running on port: %d\n", port);
     return 0;
 }
