@@ -46,14 +46,23 @@ void error_handling(const char *msg) {
     exit(1);
 }
 
+
 void *accept_request(void *arg) {
     struct stat sta;
-    char buff[size], method[255];
+    char buff[size], method[255], url[255];
+    char path[512];
+    char *query_string = NULL;
     int buff_len;
+    int cgi = 0;
     
+
+
 }
 
+
+
 int main(void) {
+
     u_short port = 4040;
     int ser_sock;
     int cli_sock;
