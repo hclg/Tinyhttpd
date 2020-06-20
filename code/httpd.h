@@ -21,7 +21,8 @@ extern "C"
     返回值： web服务器的套接字
 */
 int startup(u_short *port);
-
+void error_handling(const char *msg);
+void *accept_request(void *arg);
 
 #ifdef __cplusplus
 }
